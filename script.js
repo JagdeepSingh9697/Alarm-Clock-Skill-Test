@@ -8,10 +8,7 @@ const setAlarm = document.getElementById("setAlarm");
 let alarmsArray = [];
 let alarmMusic = new Audio("./interstellar_piano.mp3");
 
-let initialHour = 0,
-  initialMinute = 0,
-  alarmIndex = 0;
-
+let initialHour = 0, initialMinute = 0, alarmIndex = 0;
 // Search for value in the object
 const searchObject = (parameter, value) => {
   let alarmObject, objIndex, exists = false;
@@ -122,6 +119,14 @@ setAlarm.addEventListener("click", () => {
   alarmObj.id = `${alarmIndex}_${hourInput.value}_${minuteInput.value}`;
   alarmObj.alarmHour = hourInput.value;
   alarmObj.alarmMinute = minuteInput.value;
+  if(alarmObj.alarmHour === '00' && alarmObj.alarmMinute === '00'){
+    alert("Please Enter Valid Time !");
+    return;
+  }
+  if(alarmObj.alarmHour > '12' || alarmObj.alarmMinute > '59'){
+    alert("Please Enter Valid Time !");
+    return;
+  }
   alarmObj.amPm = amPmSelectValue.value;
   alarmObj.isActive = false;
   console.log(alarmObj);

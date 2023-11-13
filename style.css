@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* universal */
 * {
     padding: 0;
     margin: 0;
@@ -12,12 +13,14 @@
     min-height: 100vh;
   }
 
+/* For flex */
   .flex {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+/* For The Main Container */
   .wrapper {
     width: 440px;
     background: linear-gradient( 0deg, rgb(224 134 164) 20%, rgb(225 190 58) 74% );
@@ -29,6 +32,7 @@
     box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
   }
 
+/* Title text */
   .wrapper h2{
     font-size: 2.18em;
     text-align: center;
@@ -37,6 +41,7 @@
     margin: 0 auto;
   }
   
+/* Display Time */
   .display-time {
     font-size: 2.18em;
     text-align: center;
@@ -46,6 +51,7 @@
     margin: 0 auto;
   }
 
+/* For inputs */
   .inputs {
     display: flex;
     align-items: center;
@@ -80,6 +86,7 @@
     color: #ffffff;
   }
 
+/* For creating multiple Alarm Sections */
   .alarm {
     display: grid;
     grid-template-columns: 8fr 2fr 2fr;
@@ -121,31 +128,11 @@
     left: 2em;
   }
 
+/* Delete button */
   .deleteButton {
     background-color: transparent;
     font-size: 1.5em;
     color: white;
     border: none;
     cursor: pointer;
-  }
-
-  .content .column{
-    padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid hwb(0 89% 9%);
-    width: calc(100% / 3 - 5px);
-  }
-
-  .content.disable .column{
-    opacity: 0.6;
-    pointer-events: none;
-  }
-
-  .column select{
-    width: 100%;
-    height: 53px;
-    border:  0.5px solid hwb(0 6% 94%);
-    outline: none;
-    background: none;
-    font-size: 19px;
   }
