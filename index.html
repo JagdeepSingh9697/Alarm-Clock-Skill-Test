@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alarm Clock</title>
+  <script src="https://kit.fontawesome.com/2a38c5b79e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@500&display=swap"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="flex">
+
+  <div class="wrapper">
+    <h2 id="title">Alarm Clock <i class="fa-solid fa-clock"></i></h2>
+    <div class="display-time">00:00:00 AM</div>
+    <div class="container">
+      <div class="inputs">
+        <input type="number" id="hourInput" placeholder="00" min="1" max="12" />
+        <input type="number" id="minuteInput" placeholder="00" min="0" max="59" />
+        <select id="amPmSelectValue">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+      
+      <button id="setAlarm">Add Alarm</button>
+      <div class="activeAlarms"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>
+
+</html>
